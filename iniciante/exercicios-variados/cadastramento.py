@@ -16,10 +16,10 @@ while True:
         produtos.remove(remover_produto)
     elif '3' in opcao:
         trocar_produto = str(input('Produto a ser trocado: '))
-        produtos.remove(trocar_produto)
-        novo_nome = str(input('Nome do produto: '))
-        produtos.append(novo_nome)
-    elif '4' in opcao:
+        indice = produtos.index(trocar_produto)
+        novo_produto = str(input('Novo produto: '))
+        produtos[indice] = novo_produto
+    elif '4' in opcao:   
         print('Produtos da lista atual')
         for produto in produtos:
             print(produto)
